@@ -2,11 +2,14 @@
 contains dockerfiles, build and run scripts
 
 ## Build
+```bash
 cd build
 ./build.sh
-
+```
 ## Run
+```bash
 ./run_docker.sh
+```
 
 ## v0.1
 + CUDA 9.0 + CUDNN 7
