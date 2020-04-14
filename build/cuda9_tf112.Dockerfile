@@ -15,9 +15,8 @@ ENV LANG=C.UTF-8 LC_ALL=C.UTF-8
 
 RUN apt-get update && apt-get install -y --no-install-recommends apt-utils
 
-RUN apt-get install -y build-essential cmake pkg-config
+RUN apt-get install -y build-essential cmake pkg-config time
 
-#RUN apt-get install -y python-setuptools python-dev
 RUN apt-get install -y curl python3 python3-pip && \
     update-alternatives --install /usr/bin/python python /usr/bin/python3 10 && \
     update-alternatives --install /usr/bin/pip pip /usr/bin/pip3 10 && \
@@ -34,6 +33,8 @@ RUN python3 -m pip install --upgrade pip
 # You may also install anything else from pip like this
 ADD requirements.txt .
 RUN python3 -m pip install -r requirements.txt
+
+RUN apt-get update && apt-get install -y libsm6 libxext6 libxrender-dev python3.5-tk libboost-all-dev
 
 RUN rm /bin/sh && ln -s /bin/bash /bin/sh
 

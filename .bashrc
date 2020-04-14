@@ -130,4 +130,4 @@ alias gitm='git checkout master && git pull'
 alias gits='git status -s'
 alias sz='du -sh' # check size of a directory
 
-
+#export PATH=$PATH:/home/jhuang/.local/bin
