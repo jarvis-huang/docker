@@ -21,3 +21,4 @@ Shapely
 tqdm
 pyyaml
 numba
+easydict

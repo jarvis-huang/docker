@@ -24,6 +24,8 @@ RUN apt-get install -y curl python3 python3-pip && \
     apt-get autoremove && \
     rm -rf /var/lib/apt/lists/*
 
+#RUN python3 -m pip install futures==3.2.0
+
 # Install a specific version of TensorFlow
 RUN python3 -m pip install --no-cache-dir tensorflow-gpu==1.12.0
 
